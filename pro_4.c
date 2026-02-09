@@ -1,3 +1,4 @@
+// question no 4
 #include <stdio.h>
 #include <stdlib.h>
 
