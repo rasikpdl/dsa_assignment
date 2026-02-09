@@ -1,16 +1,45 @@
-# Program 1: Balanced Parentheses Using Stack
+Question 1 documentation:
 
-## Data Structure Used
-A stack is used to store opening brackets encountered in the expression. The stack follows the LIFO (Last In First Out) principle, which is ideal for matching parentheses.
+Stack Structure:
 
-## Functions Implemented
-- `push(char c)`  
-  Pushes an opening bracket onto the stack.
-- `pop()`  
-  Removes and returns the top element from the stack.
-- `isBalanced(char exp[])`  
-  Checks whether the given expression has balanced parentheses using stack operations.
+Has an array called 'items' to store characters (max size 100)
+Has 'top' variable that points to the last element
+When empty, top = -1
+Basic Stack Functions:
 
-## main() Overview
-The main function takes a mathematical expression as input from the user and calls the `isBalanced()` function to determine whether the parentheses are balanced or not.
+initStack() - Makes a new empty stack
+push() - Adds element to stack
+pop() - Removes element from stack
+isEmpty() - Checks if stack is empty
+Helper Functions:
 
+isOpeningBracket() - Returns true if character is '(', '[', or '{'
+isClosingBracket() - Returns true if character is ')', ']', or '}'
+isMatchingPair() - Checks if opening and closing brackets match
+Main Function:
+
+isBalanced() - Checks if expression has balanced parentheses Goes through each character Pushes opening brackets to stack Pops and matches closing brackets Returns true if stack is empty at end
+MAIN METHOD ORGANIZATION
+
+Print program header
+Define three test expressions:
+"a + (b - c) * (d"
+"m + [a - b * (c + d * {m)]"
+"a + (b - c)"
+Check each expression and print result
+End program
+SAMPLE OUTPUT
+
+BALANCED PARENTHESES CHECKER
+
+Expression: a + (b - c) * (d Result: NOT BALANCED
+
+Expression: m + [a - b * (c + d * {m)] Result: NOT BALANCED
+
+Expression: a + (b - c) Result: BALANCED
+
+Explanation:
+
+First expression has unclosed '(' bracket
+Second expression has mismatched brackets ('{' closed with ')')
+Third expression has properly matched brackets
