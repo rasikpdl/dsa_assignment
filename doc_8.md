@@ -30,5 +30,5 @@ Sorting Algorithms with Performance Analysis
 Before Sorting:
 45 12 78 3 90
 
-After Sorting:
+After Sorting done:
 3 12 45 78 90
